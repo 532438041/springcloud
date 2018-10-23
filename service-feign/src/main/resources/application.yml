@@ -1,0 +1,9 @@
+server:
+  port: 8013
+spring:
+  application:
+    name: dev-feign
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8010/eureka/

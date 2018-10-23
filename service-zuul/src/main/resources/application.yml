@@ -1,0 +1,17 @@
+server:
+  port: 82
+spring:
+  application:
+    name: dev-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8010/eureka/
+zuul:
+  routes:
+    api-r:
+      path: /api-r/**
+      serviceId: DEV-RIBBON
+    api-f:
+      path: /api-f/**
+      serviceId: DEV-FEIGN
